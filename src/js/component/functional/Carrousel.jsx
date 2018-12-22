@@ -1,17 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SliderCarrousel from "./slider.jsx";
+import { SliderCarrousel } from "./slider.jsx";
 
-function Carrousel() {
+export function Carrousel() {
 	return (
 		<div style={{ position: "relative" }}>
 			<SliderCarrousel />
 
-			<div className="carrousel_name">
+			<div className="artist_name" style={{ boxSizing: "content-box" }}>
 				<div className="wrapper">Ariana Grande</div>
 			</div>
 		</div>
 	);
 }
-
-export default Carrousel;

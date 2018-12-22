@@ -24,7 +24,7 @@ const RightDrawer = props => {
 					Pricing
 				</ListItem>
 				<ListItem button onClick={() => console.log("location")}>
-					Locatoin
+					Location
 				</ListItem>
 			</List>
 		</Drawer>
@@ -34,6 +34,6 @@ const RightDrawer = props => {
 export default RightDrawer;
 
 RightDrawer.propTypes = {
-	open: PropTypes.func,
+	open: PropTypes.bool,
 	onClose: PropTypes.func
 };

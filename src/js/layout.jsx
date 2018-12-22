@@ -8,7 +8,7 @@ import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
-import { Carrousel } from "./component/functional/carrousel.jsx";
+import { Carrousel } from "./component/functional/Carrousel.jsx";
 import { Footer } from "./component/footer.jsx";
 
 //create your first component
@@ -19,6 +19,7 @@ export class Layout extends React.Component {
 				<ScrollToTop>
 					<Navbar />
 					<Carrousel />
+
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
@@ -30,5 +31,3 @@ export class Layout extends React.Component {
 		);
 	}
 }
-
-export default Store(Layout);
