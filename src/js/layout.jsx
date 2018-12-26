@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar.jsx";
 import { Carrousel } from "./component/functional/Carrousel.jsx";
 import { Footer } from "./component/footer.jsx";
 import InfoTab from "./component/InfoTab.jsx";
+import Highlights from "./component/highlights.jsx";
 
 //create your first component
 export class Layout extends React.Component {
@@ -21,6 +22,7 @@ export class Layout extends React.Component {
 					<Navbar />
 					<Carrousel />
 					<InfoTab />
+					<Highlights />
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
