@@ -9,7 +9,9 @@ import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
 import { Carrousel } from "./component/functional/Carrousel.jsx";
-import { Footer } from "./component/footer.jsx";
+import Pricing from "./component/pricing.jsx";
+import Location from "./component/location.jsx";
+import Footer from "./component/footer.jsx";
 import InfoTab from "./component/InfoTab.jsx";
 import Highlights from "./component/highlights.jsx";
 
@@ -23,12 +25,9 @@ export class Layout extends React.Component {
 					<Carrousel />
 					<InfoTab />
 					<Highlights />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
-						<Route render={() => <h1>Not found!</h1>} />
-					</Switch>
+					<Pricing />
+					<Location />
+					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		);
