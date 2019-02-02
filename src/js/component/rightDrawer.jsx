@@ -4,26 +4,42 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
+import { scroller } from "react-scroll";
+
 const RightDrawer = props => {
+	const scrollToElement = element => {
+		scroller.scrollTo(element, {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+			offset: -150
+		});
+		props.onClose(false);
+	};
+
 	return (
 		<Drawer
 			anchor="right"
 			open={props.open}
 			onClose={() => props.onClose(false)}>
 			<List component="nav">
-				<ListItem button onClick={() => console.log("featured")}>
-					Event start in
+				<ListItem button onClick={() => scrollToElement("first")}>
+					Event starts in
 				</ListItem>
-				<ListItem button onClick={() => console.log("venue nfo")}>
+
+				<ListItem button onClick={() => scrollToElement("second")}>
 					Venue NFO
 				</ListItem>
-				<ListItem button onClick={() => console.log("higlight")}>
+
+				<ListItem button onClick={() => scrollToElement("third")}>
 					Highlights
 				</ListItem>
-				<ListItem button onClick={() => console.log("pricing")}>
+
+				<ListItem button onClick={() => scrollToElement("fourth")}>
 					Pricing
 				</ListItem>
-				<ListItem button onClick={() => console.log("location")}>
+
+				<ListItem button onClick={() => scrollToElement("fifth")}>
 					Location
 				</ListItem>
 			</List>
